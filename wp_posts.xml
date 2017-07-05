@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.5.4.1deb2ubuntu2
+- https://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Jul 04, 2017 at 08:14 PM
+- Server version: 5.7.18-0ubuntu0.16.04.1
+- PHP Version: 7.0.18-0ubuntu0.16.04.1
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="petekemb_wrdp2" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="wp_posts">
+                CREATE TABLE `wp_posts` (
+                  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                  `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+                  `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_content` longtext COLLATE latin1_general_ci NOT NULL,
+                  `post_title` text COLLATE latin1_general_ci NOT NULL,
+                  `post_category` int(4) NOT NULL DEFAULT '0',
+                  `post_excerpt` text COLLATE latin1_general_ci NOT NULL,
+                  `post_status` varchar(20) COLLATE latin1_general_ci NOT NULL DEFAULT 'publish',
+                  `comment_status` varchar(20) COLLATE latin1_general_ci NOT NULL DEFAULT 'open',
+                  `ping_status` varchar(20) COLLATE latin1_general_ci NOT NULL DEFAULT 'open',
+                  `post_password` varchar(20) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+                  `post_name` varchar(200) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+                  `to_ping` text COLLATE latin1_general_ci NOT NULL,
+                  `pinged` text COLLATE latin1_general_ci NOT NULL,
+                  `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_content_filtered` longtext COLLATE latin1_general_ci NOT NULL,
+                  `post_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+                  `guid` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+                  `menu_order` int(11) NOT NULL DEFAULT '0',
+                  `post_type` varchar(20) COLLATE latin1_general_ci NOT NULL DEFAULT 'post',
+                  `post_mime_type` varchar(100) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+                  `comment_count` bigint(20) NOT NULL DEFAULT '0',
+                  PRIMARY KEY (`ID`),
+                  KEY `post_name` (`post_name`(191)),
+                  KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
+                  KEY `post_parent` (`post_parent`),
+                  KEY `post_author` (`post_author`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'petekemb_wrdp2'
+    -->
+    <database name="petekemb_wrdp2">
+        <!-- Table wp_posts -->
+        <table name="wp_posts">
+            <column name="ID">2</column>
+            <column name="post_author">1</column>
+            <column name="post_date">0000-00-00 00:00:00</column>
+            <column name="post_date_gmt">0000-00-00 00:00:00</column>
+            <column name="post_content">This is an example of a WordPress page, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many pages like this one or sub-pages as you like and manage all of your content inside of WordPress.</column>
+            <column name="post_title">About</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">about</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">0000-00-00 00:00:00</column>
+            <column name="post_modified_gmt">0000-00-00 00:00:00</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid"></column>
+            <column name="menu_order">0</column>
+            <column name="post_type">page</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">35</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-01-03 19:13:30</column>
+            <column name="post_date_gmt">2006-01-03 19:13:30</column>
+            <column name="post_content">it's my week off work in the middle of winter! summer vacation in winter! yay! this is the first of a few unlistenable shows i will be thrusting upon the world this week. they're short...at least there's that. this has two noisy pieces in it. try to enjoy.</column>
+            <column name="post_title">the heard world summer vacation special 01</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-summer-vacation-special-01</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 20:06:44</column>
+            <column name="post_modified_gmt">2006-05-31 20:06:44</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/01/03/the-heard-world-summer-vacation-special-01/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">2</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">34</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-01-04 19:09:57</column>
+            <column name="post_date_gmt">2006-01-04 19:09:57</column>
+            <column name="post_content">continuing (sp?) my week off from work in the middle of winter - it can be called drunkcasting i guess. my experiences wearing a santa hat with 30 other people on a pubcrawl through expensive newbury street in boston. plus the show is peppered with some embarrassing moments from college. enjoy!</column>
+            <column name="post_title">the heard world summer vacation special 02</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-summer-vacation-special-02</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:20:27</column>
+            <column name="post_modified_gmt">2006-05-31 19:20:27</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/01/04/the-heard-world-summer-vacation-special-02/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">33</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-01-05 18:27:37</column>
+            <column name="post_date_gmt">2006-01-05 18:27:37</column>
+            <column name="post_content">the show further deteriorates. i'm so sorry. this has some stuff from high school with me playing guitar singing about christians, and also some love poetry i wrote for girls that didn't appreciate it...probably because i never told them about it. also included is some of the regular noise. try to enjoy this one. my vacation is almost over.</column>
+            <column name="post_title">the heard world summer vacation special 03</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-summer-vacation-special-03</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:20:07</column>
+            <column name="post_modified_gmt">2006-05-31 19:20:07</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/01/05/the-heard-world-summer-vacation-special-03/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">32</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-01-06 20:21:24</column>
+            <column name="post_date_gmt">2006-01-06 20:21:24</column>
+            <column name="post_content">well, my summer vacation in january is over. this is the last part in a special series including the same noise, nonsense, and hey nonny nonny behaviour that i've forcefed cyberspace and your ears with all week. in this show we have some more embarrassing drunken hijinks, a song about the drunken hijinks, and a 3:30 minute piece extracted from 13 seconds of audio from a coffee shop recorded this very morning! take it with a grain of salt. word.</column>
+            <column name="post_title">the heard world summer vacation special 04</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-summer-vacation-special-04</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:18:11</column>
+            <column name="post_modified_gmt">2006-05-31 19:18:11</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/01/06/the-heard-world-summer-vacation-special-04/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">31</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-03-24 01:18:38</column>
+            <column name="post_date_gmt">2006-03-24 01:18:38</column>
+            <column name="post_content">show number 21 features some very special software from http://www.wizardmaster.com/bludgeonsoft/ - bludgeonsoft. the software is called abominaclavia. i also threw in some absolutely terrible anti-music. enjoy irresponsibly.</column>
+            <column name="post_title">the heard world 21</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-21</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:17:17</column>
+            <column name="post_modified_gmt">2006-05-31 19:17:17</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/03/24/the-heard-world-21/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">30</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-03-31 02:37:26</column>
+            <column name="post_date_gmt">2006-03-31 02:37:26</column>
+            <column name="post_content">pretty boring show by my standards. light weight at least. there's some fever inspired delerium caught on tape, and some music from archive.org: the hamburglers and lomov. be sure to catch the accompanying poocast! it's tiny!!</column>
+            <column name="post_title">the heard world 22</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-22</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:16:01</column>
+            <column name="post_modified_gmt">2006-05-31 19:16:01</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/03/31/the-heard-world-22/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">29</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-03-31 02:40:37</column>
+            <column name="post_date_gmt">2006-03-31 02:40:37</column>
+            <column name="post_content">it's a sensational 8-bit mono masterpiece at 8000 Hz. it's a podfart poocast. it's 6 minutes of audio crammed into 352Kb of low fidelity 1s and 0s. enjoy....</column>
+            <column name="post_title">the heard world lo-fi extravaganza</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-lo-fi-extravaganza</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:14:12</column>
+            <column name="post_modified_gmt">2006-05-31 19:14:12</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/03/31/the-heard-world-lo-fi-extravaganza/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">28</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-04-07 02:54:10</column>
+            <column name="post_date_gmt">2006-04-07 02:54:10</column>
+            <column name="post_content">sensible musical noise. this features erpa binmarsh, dan wilson, and other audio anomolies from myself.</column>
+            <column name="post_title">the heard world 23</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-23</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:15:30</column>
+            <column name="post_modified_gmt">2006-05-31 19:15:30</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/04/07/the-heard-world-23/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">27</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-04-14 01:45:57</column>
+            <column name="post_date_gmt">2006-04-14 01:45:57</column>
+            <column name="post_content">total breakdown ensues. more strange audio, this time my new homebuilt synthesizer, the 'knoisebox' is the major player. music also from aftertouch (care of the podsafe music network) and wesley willis.</column>
+            <column name="post_title">the heard world degeneration special</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-degeneration-special</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:15:18</column>
+            <column name="post_modified_gmt">2006-05-31 19:15:18</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/04/14/the-heard-world-degeneration-special/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">4</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">25</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-04-28 03:00:13</column>
+            <column name="post_date_gmt">2006-04-28 03:00:13</column>
+            <column name="post_content">a SID based, c64 opening gives way to eloquent musings. dan wilson's shropshire examiner takes us to new heights where we enjoy lots of music by you! the consumers! a quick audio tour of a college train ride, and before you know it, the fun's over, and you have to wait another week to hear my sweet atonal refrains.</column>
+            <column name="post_title">the heard world 26</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-26</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:10:25</column>
+            <column name="post_modified_gmt">2006-05-31 19:10:25</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/04/28/the-heard-world-26/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">26</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-04-21 00:00:41</column>
+            <column name="post_date_gmt">2006-04-21 00:00:41</column>
+            <column name="post_content">more audio nonsense, and an open e-mail to my friend across the pond as the show reaches a degenerative plateau - but of course because of this, the content quality of the show has suffered. this is due to a lot of pressure on my own part to get this one done just right and on time.</column>
+            <column name="post_title">the heard world degeneration plateau</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-degeneration-plateau</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:12:09</column>
+            <column name="post_modified_gmt">2006-05-31 19:12:09</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/04/21/the-heard-world-degeneration-plateau/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">23</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-05-14 20:15:07</column>
+            <column name="post_date_gmt">2006-05-14 20:15:07</column>
+            <column name="post_content">late again, sorry. sequencing, more circuit bending, and yet more meadow house. enjoy.</column>
+            <column name="post_title">the heard world 28</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-28</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:07:05</column>
+            <column name="post_modified_gmt">2006-05-31 19:07:05</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/05/14/the-heard-world-28/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">24</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-05-08 11:08:56</column>
+            <column name="post_date_gmt">2006-05-08 11:08:56</column>
+            <column name="post_content">sorry this is late, my dog ate my rss feed. ha ha ha ha! humour! this show features a ravaged casio, the usual nonsense, some homemade music, and something delectable by meadow house. enjoy.</column>
+            <column name="post_title">the heard world 27 - circuit bending!</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-27-circuit-bending</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:07:19</column>
+            <column name="post_modified_gmt">2006-05-31 19:07:19</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/05/08/the-heard-world-27-circuit-bending/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">22</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-05-19 03:50:46</column>
+            <column name="post_date_gmt">2006-05-19 03:50:46</column>
+            <column name="post_content">it's a piezo electric hootenanny filled with crystal toom-foolery and shielded audio cable quack-hackery! plus the usual blend of noise and nonsense - if you do nothing else, skip to just about the last 5 minutes and hear something completely different. i think you'll be pleasantly surprised and offended. 3NJ0YX0rZ!!!!!!!111111111</column>
+            <column name="post_title">the piezo electric world 29</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-piezo-electric-world-29</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:03:39</column>
+            <column name="post_modified_gmt">2006-05-31 19:03:39</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/05/19/the-piezo-electric-world-29/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">40</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-06-12 21:36:25</column>
+            <column name="post_date_gmt">2006-06-13 02:36:25</column>
+            <column name="post_content">this show gets very very loud. it features a distorted preacher, a distorted &lt;a href=&quot;http://www.petekemble.com/images/IMGP1536.AVI&quot;&gt;cracklebox&lt;/a&gt;, and a distorted dating show manipulation to name a few. there's some undistorted disappointment too.</column>
+            <column name="post_title">the heard world 32: a collection of distorted noises</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-32-a-collection-of-distorted-noises</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-06-12 21:36:25</column>
+            <column name="post_modified_gmt">2006-06-13 02:36:25</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/06/12/the-heard-world-32-a-collection-of-distorted-noises/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">21</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-05-26 04:17:23</column>
+            <column name="post_date_gmt">2006-05-26 04:17:23</column>
+            <column name="post_content">you've read about them in magazines. you've seen them on billboards and at fashion show premieres. now you can penetrate the seedy underbelly of the exciting world of circuit bending! hear what happens when naughty little casio sa-35 is modified to &quot;short out&quot; and encouraged to &quot;just go nuts&quot;. you won't want to miss what happens with it's freshly soldered electrodes! they're dimes! but you didn't hear that from us!</column>
+            <column name="post_title">the glamorous life of circuit bending</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-glamorous-life-of-circuit-bending</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-05-31 19:03:15</column>
+            <column name="post_modified_gmt">2006-05-31 19:03:15</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworldtest/2006/05/26/the-glamorous-life-of-circuit-bending/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">2</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">39</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-06-12 21:24:01</column>
+            <column name="post_date_gmt">2006-06-13 02:24:01</column>
+            <column name="post_content">beautiful noises in my eyesâ€¦er, ears. how much fun can one person have with a hacked tape player, a childrenâ€™s metal bar keyboard, some audio software, a homemade cracklebox, a guitar, abominaclavia, and a dating show on at 330am?!?!! listen and find out!!!!! OMG TOTALLY!!!</column>
+            <column name="post_title">the heard world 31: a collection of noises</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-31-a-collection-of-noises</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-06-12 21:37:09</column>
+            <column name="post_modified_gmt">2006-06-13 02:37:09</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/06/12/the-heard-world-31-a-collection-of-noises/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">37</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-03-04 18:43:33</column>
+            <column name="post_date_gmt">2006-03-04 23:43:33</column>
+            <column name="post_content">this is just taking things too far. this is evidence that i might need some listener feedback. i think anyway. mostly just talking, and mental spewage into a tape recorder a la train wreck (episode) number 12. there's a little chamber music piece of mine from college near the end. </column>
+            <column name="post_title">the heard world (weekend special) 18</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-weekend-special-18</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-03-04 18:43:33</column>
+            <column name="post_modified_gmt">2006-03-04 23:43:33</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/03/04/the-heard-world-weekend-special-18/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">41</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-06-18 22:30:03</column>
+            <column name="post_date_gmt">2006-06-19 03:30:03</column>
+            <column name="post_content">i've been too hard on you listeners, too harsh with noises. so, this week, enjoy this very tonal and hopefully soothing show. please leave comments with pkemble@gmail.com. gee thanks!</column>
+            <column name="post_title">the heard world 33: a very tonal affair</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-33-a-very-tonal-affair</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-06-18 22:30:03</column>
+            <column name="post_modified_gmt">2006-06-19 03:30:03</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/06/18/the-heard-world-33-a-very-tonal-affair/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">42</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-07-04 11:24:25</column>
+            <column name="post_date_gmt">2006-07-04 16:24:25</column>
+            <column name="post_content">this show is about my cd dropping experience. it features a malformed english accent, some stupendous quality rambling, a lot of noise (as usual) and a brief but special message from a circuit bent talk 'n' learn alphabet toy. sorry it's been such a long time that i've had a show. i'm still building up the heard world homemade orchestra.</column>
+            <column name="post_title">the heard world 34</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-34</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-07-04 11:24:25</column>
+            <column name="post_modified_gmt">2006-07-04 16:24:25</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/07/04/the-heard-world-34/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">43</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-07-15 19:45:33</column>
+            <column name="post_date_gmt">2006-07-16 00:45:33</column>
+            <column name="post_content">covert bar recording at great scott in allston covering it's friday night, &quot;the pill&quot;. britpop abounds as i try my hardest to record a hipster with a faux british accent. coincidentally there was a little camera crew there as well interviewing patrons and getting some of their best stories from the weekly happening that's in it's 8th year. it goes horribly for me as people discover my recording device and i end up at an afterparty talking about the callous music industry with a girl who works for sony in new york city. she just didn't understand that music comes from the heart, not the wallet, and unfortunately the whole conversation was in the context of the latter. there was about 2+ hours of audio i had to sift through to get all this. if anyone's interested in receiving the full unedited audio of the whole evening, please let me know. i invite all and any comments to pkemble@gmail.com
+</column>
+            <column name="post_title">the heard world 35: a depressing conversation</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-35-a-depressing-conversation</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-07-15 19:45:33</column>
+            <column name="post_modified_gmt">2006-07-16 00:45:33</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/07/15/the-heard-world-35-a-depressing-conversation/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">44</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-07-29 01:54:08</column>
+            <column name="post_date_gmt">2006-07-29 06:54:08</column>
+            <column name="post_content">the first half of the show is my own take on commercial FM Radio, and the likely shitely music you can expect to hear. i guess i could have developed this more, but before i can the show takes a gradual slide into pure self-absorbed, drunken mysogyny recorded in the back alley of a central square bar. this is tempered with a hacked music box hooked up to a piezo driven homemade slinky reverb unit and ray wilson's weird sound generator. our only hope is &lt;a href=&quot;http://www.myspace.com/skrillmeadow&quot;&gt;skrillmeadow&lt;/a&gt; who is in my opinion is the only valid reason to log onto myspace. if only there were more like him. the other three discernable songs are dirty rituals, sewage and sexist pig, all originals by myself. enjoy this one, quality is fleeting.</column>
+            <column name="post_title">the heard world 36: FM Radio and misogyny</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-36-fm-radio-and-misogyny</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-07-29 01:54:43</column>
+            <column name="post_modified_gmt">2006-07-29 06:54:43</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/07/29/the-heard-world-36-fm-radio-and-misogyny/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">45</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-08-14 16:17:02</column>
+            <column name="post_date_gmt">2006-08-14 21:17:02</column>
+            <column name="post_content">i'm sorry i have been mostly absent from your lives. things are very busy at the heard world headquarters, and we are short staffed due to a scheduling mishap involving an unfortunate amount of staff members taking their summer vacations. i have personally scrapped together this show for your enjoyment which includes rambling through a homemade microphone on the way to the liquor store modulated through a homemade delay pedal; &lt;a href=&quot;http://www.tonepad.com&quot;&gt;rebote 2&lt;/a&gt; and several insects, birds, and RF signals that play together nicely. We end with a short motorcycle test ride. see if you can hear the part where i stall the engine like the true winner i am.</column>
+            <column name="post_title">the heard world 37: aleatory and creatures</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-37-aleatory-and-creatures</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-08-14 16:17:02</column>
+            <column name="post_modified_gmt">2006-08-14 21:17:02</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/08/14/the-heard-world-37-aleatory-and-creatures/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">46</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-09-18 21:15:57</column>
+            <column name="post_date_gmt">2006-09-19 02:15:57</column>
+            <column name="post_content">sorry for the lack of shows lately. i've moved my address as well as been over the pond. more will follow. 
+
+Enjoy this show, broadcast over FM radio to my kitchen. if you don't like it, think of it as filler until the next installment. special thanks to toby and ami.</column>
+            <column name="post_title">the heard world 38: FM Radio</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-38-fm-radio</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-09-18 21:15:57</column>
+            <column name="post_modified_gmt">2006-09-19 02:15:57</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/09/18/the-heard-world-38-fm-radio/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">47</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-10-01 14:33:48</column>
+            <column name="post_date_gmt">2006-10-01 19:33:48</column>
+            <column name="post_content">an amazing amount of work went into this show, trust me. i had to get drunk by myself in public, piss on a dumpster, then silently lament all the way home in a cab. all the while, i managed to have a live DIY orgy of electronic nonsense and an overly-priced plastic glockenspiel that was subsequently interrupted by becky getting home earlier than expected. special thanks to T for the additional audio.
+
+Please listen in stereo - headphones if you have great patience with your ears in terms of left vs. right playtimes. siezures are not my fault.</column>
+            <column name="post_title">the heard world 39: Degeneration Special II</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-39-degeneration-special-ii</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-10-01 14:33:48</column>
+            <column name="post_modified_gmt">2006-10-01 19:33:48</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/10/01/the-heard-world-39-degeneration-special-ii/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">49</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-11-04 22:48:15</column>
+            <column name="post_date_gmt">2006-11-05 03:48:15</column>
+            <column name="post_content">20 minutes of your favourite worker drone, live from my living room, november 4th, 2006. all featured noises are from homemade instruments. recorded using 1/4&quot; tape on a sanyo &quot;slim 8&quot; cassette recorder.
+&lt;img src=&quot;http://static.flickr.com/107/289038935_48a2abac2f.jpg?v=0&quot; height=&quot;200&quot;/&gt;
+
+</column>
+            <column name="post_title">the heard world 40: drones</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-40-drones</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-11-04 22:49:36</column>
+            <column name="post_modified_gmt">2006-11-05 03:49:36</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/11/04/the-heard-world-40-drones/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">50</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-11-06 23:13:55</column>
+            <column name="post_date_gmt">2006-11-07 04:13:55</column>
+            <column name="post_content">the exposition of the previous episode of the heard world. this show is e-mail spam for your ears. 90% of the instruments in the main feature of this show are handmade. enjoy.
+&lt;img src=&quot;http://static.flickr.com/108/267694128_379bdea9f5.jpg?v=0&quot;/&gt;</column>
+            <column name="post_title">the heard world 41: drones; exposition</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-41-drones-exposition</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-11-06 23:13:55</column>
+            <column name="post_modified_gmt">2006-11-07 04:13:55</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/11/06/the-heard-world-41-drones-exposition/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">51</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-11-23 22:19:47</column>
+            <column name="post_date_gmt">2006-11-24 03:19:47</column>
+            <column name="post_content">i can't believe it's been 364 days already. 
+
+a retrospective on the most listened to podcast on &quot;the net&quot; today. in just 364 days, 42 episodes helped shape a generation. this is the story of that exciting 364 day period. beverages will not be served.</column>
+            <column name="post_title">the heard world 42: anniversary special</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-42-anniversary-special</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-11-23 22:19:47</column>
+            <column name="post_modified_gmt">2006-11-24 03:19:47</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/11/23/the-heard-world-42-anniversary-special/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">52</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-12-06 21:51:01</column>
+            <column name="post_date_gmt">2006-12-07 02:51:01</column>
+            <column name="post_content">the long awaited audio from my trip to england and amsterdam in september. everytime i arrive back to the states i feel a little more like a hollowed out robot reading a script. call it cliche, call it what you like. i just can't believe i'm wasting my perfectly good eu citizenship feeding the american economy. oh, i didn't mess with the audio at all, these are raw recordings, unedited. i swear. enjoy.
+
+&lt;img src=&quot;http://theheardworld.org/images/seat.jpg&quot;/&gt;</column>
+            <column name="post_title">the heard world 43: Europe</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-43-europe</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-12-06 21:51:01</column>
+            <column name="post_modified_gmt">2006-12-07 02:51:01</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/12/06/the-heard-world-43-europe/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">1</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">53</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2006-12-12 23:25:04</column>
+            <column name="post_date_gmt">2006-12-13 04:25:04</column>
+            <column name="post_content">nothing like a good late night / early morning wallowing in the empty house that at one time held a bit more than cacophonous banging slowed to speeds matched only by the accompanying loneliness of old, raw materials that form a shelter over desperation. this is where the heard world relationship special would have been.
+
+&lt;img src=&quot;http://petekemble.com/images/nightstudio.jpg&quot;/&gt;</column>
+            <column name="post_title">the heard world 44: wallowing</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-44-wallowing</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2006-12-12 23:25:04</column>
+            <column name="post_modified_gmt">2006-12-13 04:25:04</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2006/12/12/the-heard-world-44-wallowing/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">1</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">54</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2007-03-11 11:21:08</column>
+            <column name="post_date_gmt">2007-03-11 16:21:08</column>
+            <column name="post_content">a musical lecture by religious studies sociopath Mr Simon Etheridge flanked by the TBSHS school orchestra. no, this doesn't mean that the heard world is back, it is merely turning over in it's sleep accidentally kicking the cat off the bed.
+
+&lt;img height=&quot;300&quot; src=&quot;http://petekemble.com/images/ether.jpg&quot;/&gt;</column>
+            <column name="post_title">the heard world 45: lecture - citizenship</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-45-lecture-citizenship</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2007-03-11 11:21:08</column>
+            <column name="post_modified_gmt">2007-03-11 16:21:08</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2007/03/11/the-heard-world-45-lecture-citizenship/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">55</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2007-03-22 16:53:45</column>
+            <column name="post_date_gmt">2007-03-22 21:53:45</column>
+            <column name="post_content">Featured in this show is a homemade reverb pedal based on the PT2399 chip, a Roland Juno-60, a Yamaha AN200, and your's trully drunk in a tub. There are laser pointer experiments, and more of the same ramblings of drunken misogyny scrawled in a little marble notebook, and poured over with the backup of totally kewl acid beats and bumps. did i mention i was in dallas texas for work last week?
+
+&lt;img height=250 src=&quot;http://petekemble.com/images/walmart-parking.jpg&quot;/&gt; &lt;img height=250 src=&quot;http://petekemble.com/images/saltgrass.jpg&quot;/&gt;</column>
+            <column name="post_title">the heard world 46: Dallas</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-46-dallas</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2007-03-22 16:53:45</column>
+            <column name="post_modified_gmt">2007-03-22 21:53:45</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2007/03/22/the-heard-world-46-dallas/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">56</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2007-04-11 23:09:47</column>
+            <column name="post_date_gmt">2007-04-12 04:09:47</column>
+            <column name="post_content">the bedroom band days are here...in a way they never started? i have to stress that you people listen to this show with headphones, preferably in a quiet room...maybe while in bed? this episode was recorded using stereo microphones in order to catch the acoustic properties of the room in which the audio un-crimes herein (suspects pictured below) were performed. enjoy the fm radio bumpers, they took forever to make relative to the rest of the show. 
+&lt;p&gt;
+&lt;img src=&quot;http://petekemble.com/images/47.jpg&quot;/&gt;&lt;/p&gt;</column>
+            <column name="post_title">the heard world 47: bedroom band days</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-47-bedroom-band-days</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2007-04-11 23:09:47</column>
+            <column name="post_modified_gmt">2007-04-12 04:09:47</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2007/04/11/the-heard-world-47-bedroom-band-days/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">1</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">57</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2007-09-05 00:59:02</column>
+            <column name="post_date_gmt">2007-09-05 05:59:02</column>
+            <column name="post_content">this is basically just a panic attack disguised as heartbreak. this is an extremely personal episode, so revel in my harsh stupidity that i actually posted it. that will be entertainment enough. in turn, that will motivate me to start working on this podcast which has become so ridiculously derivative and contrived that it is comical. this was recorded in may after a trip to europe back in may. it should be listened to as a part 2 to my previous show, the heard world 43: Europe. anyway, if you know me, please don't bring up this episode to me. i'll just deny ever doing it. dysthymia's a bitch.</column>
+            <column name="post_title">the heard world 48: dutch heartbreak</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">draft</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-48-dutch-heartbreak</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2007-10-10 09:28:50</column>
+            <column name="post_modified_gmt">2007-10-10 14:28:50</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2007/09/05/the-heard-world-48-dutch-heartbreak/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">58</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2008-03-04 21:52:58</column>
+            <column name="post_date_gmt">2008-03-05 02:52:58</column>
+            <column name="post_content">the end is near. this 2nd to last episode of the heard world will blah blah blah. feck it i'm sick of this shit. hello to my 3 listeners.</column>
+            <column name="post_title">the heard world 49: b-sides to songs you'll never hear</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-49-b-sides-to-songs-youll-never-hear</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2008-03-04 21:53:08</column>
+            <column name="post_modified_gmt">2008-03-05 02:53:08</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2008/03/04/the-heard-world-49-b-sides-to-songs-youll-never-hear/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">3</column>
+        </table>
+        <table name="wp_posts">
+            <column name="ID">60</column>
+            <column name="post_author">1</column>
+            <column name="post_date">2009-09-28 19:32:21</column>
+            <column name="post_date_gmt">2009-09-29 00:32:21</column>
+            <column name="post_content">so long, fare well. thanks for listening.</column>
+            <column name="post_title">the heard world 50: an anxious goodbye</column>
+            <column name="post_category">0</column>
+            <column name="post_excerpt"></column>
+            <column name="post_status">publish</column>
+            <column name="comment_status">open</column>
+            <column name="ping_status">open</column>
+            <column name="post_password"></column>
+            <column name="post_name">the-heard-world-50-an-anxious-goodbye</column>
+            <column name="to_ping"></column>
+            <column name="pinged"></column>
+            <column name="post_modified">2009-09-28 19:32:21</column>
+            <column name="post_modified_gmt">2009-09-29 00:32:21</column>
+            <column name="post_content_filtered"></column>
+            <column name="post_parent">0</column>
+            <column name="guid">http://petekemble.com/heardworld/2009/09/28/the-heard-world-50-an-anxious-goodbye/</column>
+            <column name="menu_order">0</column>
+            <column name="post_type">post</column>
+            <column name="post_mime_type"></column>
+            <column name="comment_count">0</column>
+        </table>
+    </database>
+</pma_xml_export>
