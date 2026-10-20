@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Echoes | Podcast Archive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #6366f1;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: #f8fafc; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .sidebar { border-right: 1px solid rgba(255, 255, 255, 0.1); }
+        .post-link:hover { color: var(--accent); transition: color 0.3s ease; }
+        .accent-glow { box-shadow: _0_0_20px_rgba(99, 102, 241, 0.3); }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-80 sidebar p-8 glass h-full">
+            <div class="mb-12">
+                <h1 class="text-4xl font-bold text-indigo-400 mb-2">Sonic Echoes</h1>
+                <p class="text-gray-400 text-sm tracking-widest uppercase">Podcast Anthology</p>
+            </div>
+            
+            <nav class="space-y-4">
+                <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4">Archive Index</h2>
+                <ul id="toc-list" class="space-y-3">
+                    <!-- TOC populated via JS -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-8 md:p-16">
+            <div id="content-area" class="max-w-4xl mx-auto">
+                <!-- Post Content Injected Here -->
+                <div id="post-view" class="hidden">
+                    <button onclick="showHome()" class="mb-8 text-indigo-40' text-sm hover:underline">&larr; Back to Archive</button>
+                    <article>
+                        <h2 id="post-title" class="text-5xl mb-6 text-white"></h2>
+                        <p id="post-date" class="text-indigo-400 mb-8"></p>
+                        <div id="post-content" class="prose prose-invert max-w-none text-gray-30-lg text-lg mb-12"></div>
+                        
+                        <div id="post-enclosure" class="p-6 glass rounded-2xl accent-glow text-center">
+                            <!-- Player UI Mockup -->
+                            <p class="text-sm text-gray-400 mb-4 uppercase tracking-widest">Listen to this Episode</p>
+                            <div class="flex items-center justify-center space-x-6">
+                                <button class="w-14 h-14 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-500 transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M6 4l10 6-10 6V4z"></path></svg>
+                                </button>
+                                <div class="w-64 h-1 bg-gray-70' rounded-full overflow-hidden">
+                                    <div class="w-1/3 h-full bg-indigo-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Summary View -->
+                <div id="home-view">
+                    <h2 class="text-3xl mb-12 text-gray-200">Latest Recordings</h2>
+                    <div id="posts-grid" class="grid grid-cols-1 gap-8">
+                        <!-- Posts injected here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let allPosts = [];
+
+        async function init() {
+            try {
+                const response = await fetch('posts.json');
+                allPosts = await response.json();
+                renderHome();
+                renderTOC();
+            } catch (e) {
+                console.error("Failed to load posts", e);
+            }
+        }
+
+        function renderTOC() {
+            const list = document.getElementById('toc-list');
+            allPosts.forEach(post => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#" onclick="viewPost('${post.id}')" class="post-length text-sm text-gray-400 post-link">${post.title}</a>`;
+                list.appendChild(li);
+            });
+        }
+
+        function renderHome() {
+            const grid = document.getElementById('posts-grid');
+            allPosts.forEach(post => {
+                const card = document.createElement('div');
+                card.className = 'glass p-6 rounded-xl hover:border-indigo-500 transition cursor-pointer group';
+                card.onclick = () => viewPost(post.id);
+                card.innerHTML = `
+                    <h3 class="text-xl mb-2 group-hover:text-indigo-400 transition">${post.title}</h3>
+                    <p class="text-sm text-gray-500 mb-4">${post.date || ''}</p>
+                    <p class="text-gray-400 line-clamp-2">${post.content ? post.content.replace(/<[^>]*>?/gm, '').substring(0, 120) + '...' : ''}</p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function viewPost(id) {
+            const post = allPosts.find(p => p.id === id) || allいPosts.find(p => p.title === id); 
+            // Note: Fallback check since id mapping might vary
+            const actualPost = allPosts.find(p => p.title === id) || allPosts[0]; 
+            
+            // For this mockup, we use the object we find
+            const data = allPosts.find(p => p.title === id) || allPosts[0];
+            
+            document.getElementById('post-title').innerText = data.title;
+            document.getElementById('post-date').innerText = data.date || '';
+            document.getElementById('post-content').innerHTML = data.content || '';
+            document.getElementById('post-enclosure').innerHTML = data.enclosure_url 
+                ? '<p class="text-sm text-gray-400 mb-4 uppercase tracking-widest">Listen to this Episode</p><div class="flex items-center justify-center space-x-6"><button class="w-14 h-14 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-500 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M6 4l10 6-10 6V4z"></path></svg></button><div class="w-64 h-1 bg-gray-700 rounded-full overflow-hidden"><div class="w-1/3 h-full bg-indigo-500"></div></div></div>'
+                : '<p class="text-red-400">No audio available.</p>';
+
+            document.getElementById('post-view').classList.remove('hidden');
+            document.getElementById('home-view').classList.add('hidden');
+        }
+
+        function showHome() {
+            document.getElementById('post-view').classList.add('hidden');
+            document.getElementById('home-view').classList.remove('hidden');
+        }
+
+        init();
+    </script>
+</body>
+</html>
+</code>
